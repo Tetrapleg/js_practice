@@ -1,7 +1,7 @@
 
 let money = 50; 
 
-const income = "Родившиеся до ";
+const income = "Привет!";
 
 let addExpenses = false;
 
@@ -11,15 +11,8 @@ const mission = null;
 
 let period = {a: 'day', b: 'monse', c: 'year'};
 
-// alert ('Первый урок!!');
-
-console.log(income + period.a + ' ' + period['b'] + ' ' + period.c + ' получают скидку ' + money + ' %' + ' ' + 'и ваш платёж составляет ' + deposit);
+alert ('Первый урок!!');
 
 console.log(period);
 
-period.a = 19;
-period.b = 'may';
-period.c = '1999 г'
-
-console.log(income + period.a + ' ' + period['b'] + ' ' + period.c + ' получают скидку ' + money + ' %' + ' ' + 'и ваш платёж составляет ' + deposit);
 

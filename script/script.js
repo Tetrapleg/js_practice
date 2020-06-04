@@ -11,7 +11,7 @@ const mission = null;
 
 let period = {a: 'day', b: 'monse', c: 'year'};
 
-// alert ('Первый урок!!');
+alert ('Первый урок!!');
 
 console.log(income + period.a + ' ' + period['b'] + ' ' + period.c + ' получают скидку ' + money + ' %' + ' ' + 'и ваш платёж составляет ' + deposit);
 

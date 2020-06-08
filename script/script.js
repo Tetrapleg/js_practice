@@ -31,7 +31,7 @@ console.log(addExpenses.split(', '));
 
 let budgetDay = money / 30;
 
-console.log(budgetDay);
+console.log('budgetDay ', budgetDay);
 
 money = prompt('Ваш месячный доход?');
 

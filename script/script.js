@@ -13,13 +13,16 @@ let mission = 5000; //"Цель накопить"
 
 let period = 8; //"Срок, за который нужно накопить"
 
-console.log(typeof money);
+let showTypeOf = function(data) {
+  console.log(data, typeof(data));
+};
 
-console.log(typeof income);
-
-console.log(typeof deposit);
+showTypeOf(money);
+showTypeOf(income);
+showTypeOf(deposit);
 
 console.log(addExpenses.split(', '));
+console.log(income.length);
 
 let budgetDay = money / 30;
 
@@ -69,12 +72,17 @@ console.log('Цель накопить будет достигнута за ' + 
 budgetDay = accumulatedMonth / 30;
 console.log('Бюджет на день ' + Math.floor(budgetDay));
 
-if (budgetDay >= 1200) {
-  console.log('У вас высокий уровень дохода');
-} else if (budgetDay >= 600) {
-  console.log('У вас средний уровень дохода');
-} else if (budgetDay < 600, budgetDay >= 0) {
-  console.log('К сожалению у вас уровень дохода ниже среднего');
-} else if (budgetDay < 0) {
-  console.log('Что-то пошло не так');
-}
+
+let getStatusIncome = function(){
+    if (budgetDay >= 1200) {
+      return ('У вас высокий уровень дохода');
+    } else if (budgetDay >= 600) {
+      return ('У вас средний уровень дохода');
+    } else if (budgetDay < 600, budgetDay >= 0) {
+      return ('К сожалению у вас уровень дохода ниже среднего');
+    } else if (budgetDay < 0) {
+      return ('Что-то пошло не так');
+    }
+};
+
+console.log(getStatusIncome());

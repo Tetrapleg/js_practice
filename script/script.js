@@ -48,6 +48,7 @@ let expenses1, expenses2;
 let getExpensesMonth = function(){
   let sum = 0;
   let control;
+  let arr = [];
 
   for (let i = 0; i < 4; i++) {
 
@@ -58,10 +59,24 @@ let getExpensesMonth = function(){
     while(!isNumber(control)) {
         control = prompt('Во сколько это обойдется?');
     }
+
+//Проверка на нули в начале строки
+    for (let i = 0; i < control.length; i++) {
+      if (control - control.slice(1) != '0') {
+        control = control;
+        break;
+      } else {
+        control = control.slice(1);
+      }
+    }
+    arr[i] = control;
+    
+      
     sum += +control;
 
     
   }
+  console.log(arr);
   console.log(expenses);
   return sum;
 };

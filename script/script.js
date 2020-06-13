@@ -56,7 +56,7 @@ let appData = {
   //Функция возвращает Накопления за месяц (Доходы минус расходы)
   getBudget: function(){
 
-    appData.budgetMonth = money - appData.expensesMonth;
+    appData.budgetMonth = appData.budget - appData.expensesMonth;
     appData.budgetDay = appData.budgetMonth / 30;
     return; 
   },
@@ -83,7 +83,6 @@ appData.expensesMonth = appData.getExpensesMonth();
 console.log('Расходы за месяц: ' + appData.expensesMonth);
 
 appData.getBudget();
-console.log('Накопления за месяц ' + appData.budgetMonth);
 
 appData.period = appData.getTargetMonth(appData.mission, appData.budgetMonth);
 

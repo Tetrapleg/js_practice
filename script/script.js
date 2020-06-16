@@ -48,9 +48,9 @@ let appData = {
           }
 
           let addExpenses = prompt('Перечислите возможные расходы через запятую');
-          if (addExpenses === '') {
-            while (addExpenses === '') {
-              addExpenses = prompt('Введите возможные расходы, или нажмите "Отмена"');
+          if (addExpenses === '' || isNumber(addExpenses)) {
+            while (addExpenses === '' || isNumber(addExpenses)) {
+              addExpenses = prompt('Введите возможные расходы (если число, введите прописью), или нажмите "Отмена"');
             }
           } else if (addExpenses !== null) {
             appData.addExpenses = addExpenses.toLowerCase().split(',');

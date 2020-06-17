@@ -7,7 +7,8 @@ const books = document.querySelectorAll('.books'),
       chapterBook2 = book[0].querySelectorAll('li'),
       chapterBook5 = book[5].querySelectorAll('li'),
       chapterBook6 = book[2].querySelectorAll('li'),
-      newChapterBook6 = document.createElement('li');
+      newChapterBook6 = document.createElement('li'),
+      adv = document.querySelector('.adv');
 
 //Восстановить порядок книг.
 books[0].prepend(book[1]);
@@ -19,6 +20,9 @@ body.style.backgroundImage = 'url(image/you-dont-know-js.jpg)';
 
 //Исправить заголовок в книге 3
 titleBook3.innerHTML = 'Книга 3. this и Прототипы Объектов';
+
+//Удалить рекламу со страницы
+adv.remove();
 
 //Восстановить порядок глав во второй и пятой книге 
 chapterBook2[3].after(chapterBook2[6]);

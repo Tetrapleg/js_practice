@@ -52,7 +52,6 @@ let appData = {
   start: function() {
 
     this.budget = +salaryAmount.value;
-// console.log(this);
     this.getExpenses();
     this.getIncome();
     this.getExpensesMonth();
@@ -120,8 +119,8 @@ let appData = {
   },
 
   getAddExpenses: function() {
-    let addExpenses = additionalExpensesItem.value.split(',');
-    addExpenses.forEach(function(item){
+    let addExpens = additionalExpensesItem.value.split(',');
+    addExpens.forEach(function(item){
       item = item.trim();
       if (item !== ''){
         this.addExpenses.push(item);
@@ -234,28 +233,3 @@ incomePlus.addEventListener('click', appData.addIncomeBlock);
 expensesPlus.addEventListener('click', appData.addExpensesBlock);
 periodSelect.addEventListener('input', appData.changePeriod);
 salaryAmount.addEventListener('change', appData.stopClick);
-
-  
-
-
-
-// console.log('Расходы за месяц: ' + appData.expensesMonth);
-
-//Если getTargetMonth возвращает нам отрицательное значение!!!!!!!!!!!!!!!!!!!!
-// if (appData.getTargetMonth() > 0) {
-//   console.log('Цель накопить будет достигнута за ' + Math.ceil(appData.getTargetMonth()) + ' месяцев');
-// } else{
-//   console.log('Цель накопить не будет достигнута!');
-// }
-
-// console.log(appData.getStatusIncome());
-
-// console.log();
-
-// for (let key in appData){
-//   console.log('Наша программа включает в себя данные: ' + key + ' - ' + appData[key]);
-// }
-
-// console.log(appData.addExpenses.join(', '));
-// appData.getInfoDeposit();
-// console.log(appData.percentDeposit, appData.moneyDeposit, appData.calcSaveMoney());

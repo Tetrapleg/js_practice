@@ -124,7 +124,7 @@ let appData = {
     addExpenses.forEach(function(item){
       item = item.trim();
       if (item !== ''){
-        appData.addExpenses.push(item);
+        this.addExpenses.push(item);
       }
     });
   },
@@ -133,7 +133,7 @@ let appData = {
     additionalIncomeItem.forEach(function(item){
       let itemValue = item.value.trim();
       if (itemValue !== '') {
-        appData.addIncome.push(itemValue);
+        this.addIncome.push(itemValue);
       }
     });
   },
@@ -198,10 +198,12 @@ let appData = {
   calcPeriod: function () {
     return this.budgetMonth * periodSelect.value;
   },
-  chengeAtCancel: function () {debugger
+  chengeAtCancel: function () {
     let input = document.querySelectorAll('input');
     for (let i = 0; i < input.length; i++) {
-      input[i].disabled = true;
+      if (input[i] !== periodSelect) {
+        input[i].disabled = true;
+      }
     }
     start.style.display = 'none';
     btnCancel.style.display = 'block';
@@ -210,14 +212,11 @@ let appData = {
         input[i].removeAttribute('disabled');
         if (input[i] !== periodSelect) {
           input[i].value = '';
-        } else {
-          input[i].value = 1;
         }
       }
       start.style.display = 'block';
       btnCancel.style.display = 'none';
       return;
-      // location.reload(); вот так будет неправильно?
     });
   
   }
@@ -235,7 +234,6 @@ incomePlus.addEventListener('click', appData.addIncomeBlock);
 expensesPlus.addEventListener('click', appData.addExpensesBlock);
 periodSelect.addEventListener('input', appData.changePeriod);
 salaryAmount.addEventListener('change', appData.stopClick);
-
 
   
 

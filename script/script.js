@@ -80,7 +80,7 @@ const togglePopup = () => {
           
   popupContent.style.transform = `translateX(-280%)`;
   
-  const popupOnAnimate = function(){
+  const popupOnAnimate = () => {
 
     count -= 10;
     if(count >= 0 ){
@@ -91,7 +91,7 @@ const togglePopup = () => {
     }
   };
 
-  const popupOffAnimate = function(){
+  const popupOffAnimate = () => {
 
     count += 10;
     if(count <= 280){
